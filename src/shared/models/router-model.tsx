@@ -8,8 +8,10 @@ import generateRoutesChild from '../usecase/useRenderRoutes';
  */
 
 export const router = createBrowserRouter([
+
+	// Default routes is not set for the purpose of the test only
 	{
-		path: '/',
+		path: '/crm',
 		element: <RootLayout />,
 		children: generateRoutesChild(),
 		errorElement: <NotFound />,

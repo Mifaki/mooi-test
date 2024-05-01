@@ -4,9 +4,9 @@ import DashboardContainer from '../../../../routes/dashboard/Dashboard';
 
 export const staffRoutes: ItemsDataI[] = [
 	{
-		label: 'Dashboard',
-		key: '/home',
-		path: 'home',
+		label: 'CRM',
+		key: '/crm',
+		path: '/crm',
 		children: [],
 		icon: <DesktopOutlined />,
 		components: <DashboardContainer />,
