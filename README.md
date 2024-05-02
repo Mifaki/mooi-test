@@ -1,6 +1,9 @@
 
 # Mooi Studio Frontend Take Home Test
 
+## Participant Note
+Default routes is not defined for the purpose of the test only
+
 ## How to run the project
 
 Use node version minimum: v21.6.1
