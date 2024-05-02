@@ -18,16 +18,13 @@ const RootLayout: React.FC = () => {
 
 	return (
 		<Layout style={{ minHeight: '100vh' }}>
-			<Layout>
+			<Layout className='bg-white'>
 				<CustomHeader />
 				<Content style={{ margin: '0 16px' }}>
 					<div
+						className='p-4 md:p-6 min-h-screen my-5'
 						style={{
-							padding: 24,
-							minHeight: '100vh',
 							borderRadius: borderRadiusLG,
-							marginTop: 20,
-							marginBottom: 20,
 						}}>
 						<Outlet />
 					</div>

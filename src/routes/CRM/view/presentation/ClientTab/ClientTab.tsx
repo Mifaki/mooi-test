@@ -42,14 +42,14 @@ const ClientTab = () => {
 
     return (
         <div className="space-y-5">
-            <div className="flex items-center gap-6">
+            <div className="flex flex-col md:flex-row items-center gap-6">
                 <Input
                     size="large"
                     placeholder="Search"
                     prefix={<SearchOutlined />}
-                    className="w-[40%]"
+                    className="md:w-[40%]"
                 />
-                <div className="space-x-4">
+                <div className="flex flex-wrap gap-2 lg:gap-4">
                     <TableFilterButton items={GenderFilter} onChange={handleChange('gender')} label="Gender" />
                     <TableFilterButton items={MartialFilter} onChange={handleChange('martialStatus')} label="Martial Status" />
                     <TableFilterButton items={EmploymentFilter} onChange={handleChange('employment')} label="Employment" />

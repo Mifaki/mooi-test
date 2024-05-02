@@ -26,6 +26,7 @@ const ClientTable = ({
             rowSelection={rowSelection}
             columns={columns}
             dataSource={filteredData}
+            scroll={{ x: "max-content" }}
             pagination={{
                 pageSize: 5,
                 total: filteredData.length
