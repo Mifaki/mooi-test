@@ -4,7 +4,7 @@ import CustomTabs from './presentation/CustomTabs/CustomTabs';
 
 const { Title } = Typography;
 
-const CRM = () => {
+const CRMContainer = () => {
   return (
     <div>
       <Title>CRM</Title>
@@ -16,4 +16,4 @@ const CRM = () => {
   )
 }
 
-export default CRM
+export default CRMContainer

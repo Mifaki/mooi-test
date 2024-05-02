@@ -1,5 +1,5 @@
 import { Avatar, TableColumnsType } from "antd";
-import { TableDataI } from "./type";
+import { TableDataI } from "./types";
 
 export const TableData: TableDataI[] = [
     {

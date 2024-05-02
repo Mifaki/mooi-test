@@ -1,7 +1,7 @@
 import { Table } from "antd"
 import { useState } from "react";
-import { TableDataI } from "./model/type";
-import { columns } from "./model/TableMockData";
+import { columns } from "../../../model/TableMockData";
+import { TableDataI } from "../../../model/types";
 
 interface ClientTableProps {
     filteredData: TableDataI[];

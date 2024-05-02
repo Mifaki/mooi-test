@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Checkbox, Button, Menu } from 'antd';
 import { PlusCircleOutlined } from '@ant-design/icons';
-import { TableFilterI } from './model/types';
+import { TableFilterI } from '../../../model/types';
 
 const TableFilterButton = ({ label, items, onChange }: TableFilterI) => {
     const [isOpen, setIsOpen] = useState(false);

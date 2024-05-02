@@ -3,8 +3,8 @@ import { Input } from "antd"
 import ClientTable from "../ClientTable/ClientTable"
 import { useRef, useState } from "react"
 import TableFilterButton from "../TableFilterButton/TableFilterButton"
-import { EmploymentFilter, GenderFilter, MartialFilter } from "../TableFilterButton/model/TableFilterOptions"
-import { TableData } from "../ClientTable/model/TableMockData"
+import { EmploymentFilter, GenderFilter, MartialFilter } from "../../../model/TableFilterOptions"
+import { TableData } from "../../../model/TableMockData"
 
 
 interface FilterState {
