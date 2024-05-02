@@ -4,11 +4,11 @@ import { Layout, theme } from 'antd';
 import { Outlet } from 'react-router-dom';
 import CustomHeader from './presentation/CustomHeader/CustomHeader';
 
-const { Content, Footer } = Layout;
+const { Content } = Layout;
 
 const RootLayout: React.FC = () => {
 	const {
-		token: { colorBgContainer, borderRadiusLG },
+		token: { borderRadiusLG },
 	} = theme.useToken();
 
 	/**
@@ -32,9 +32,6 @@ const RootLayout: React.FC = () => {
 						<Outlet />
 					</div>
 				</Content>
-				<Footer style={{ textAlign: 'center', background: colorBgContainer }}>
-					Template React Dashboard
-				</Footer>
 			</Layout>
 		</Layout>
 	);

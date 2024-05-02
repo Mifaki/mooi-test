@@ -1,6 +1,6 @@
 import { DesktopOutlined } from '@ant-design/icons';
 import { ItemsDataI } from './types';
-import DashboardContainer from '../../../../routes/dashboard/Dashboard';
+import CRM from '../../../../routes/CRM/view/CRM';
 
 export const staffRoutes: ItemsDataI[] = [
 	{
@@ -9,7 +9,7 @@ export const staffRoutes: ItemsDataI[] = [
 		path: '/crm',
 		children: [],
 		icon: <DesktopOutlined />,
-		components: <DashboardContainer />,
+		components: <CRM />,
 		show: true,
 	},
 ];

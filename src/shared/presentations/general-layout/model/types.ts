@@ -8,7 +8,7 @@ export interface ItemsDataI {
 	label: string;
 	key: string;
 	children: ItemsDataI[];
-	icon: any;
+	icon: React.ReactNode
 	components: React.ReactNode;
 	show: boolean;
 	path: string;

@@ -32,19 +32,14 @@ const UseGenerateItems = () => {
 		navigate(path);
 	};
 
-	const items: MenuItem[] = whichData.map((data) => {
-		const childrens: any = [];
+    const items: MenuItem[] = whichData.map((data) => {
+        const childrens: MenuItem[] = data.children.map((child) => ({
+            ...child,
+            key: child.key.toString(), // Ensure key is a string
+        }));
 
-		// if (!data.show) return;
-
-		if (data.children.length) {
-			data.children.forEach((child) => childrens.push(child));
-			return getItem(data.label, data.key, data.icon, childrens);
-		}
-
-		return getItem(data.label, data.key, data.icon);
-	});
-
+        return getItem(data.label, data.key, data.icon, childrens);
+    });
 	return { items, handleClickMenu };
 };
 

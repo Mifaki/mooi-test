@@ -1,12 +1,10 @@
-const useConvertQuery = () => {
-	function objectToQueryParams(obj: { [key: string]: any }): string {
-		return Object.keys(obj)
-			.map(
-				(key) => `${encodeURIComponent(key)}=${encodeURIComponent(obj[key])}`
-			)
-			.join('&');
-	}
-	return { objectToQueryParams };
+const useConvertQuery = <T extends Record<string, string | number | boolean>>() => {
+    function objectToQueryParams(obj: T): string {
+        return Object.entries(obj)
+            .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value.toString())}`)
+            .join('&');
+    }
+    return { objectToQueryParams };
 };
 
 export default useConvertQuery;
