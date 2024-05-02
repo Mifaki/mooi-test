@@ -34,5 +34,9 @@ export const EmploymentFilter: MenuItemI[] = [
     {
         key: 'Employed',
         label: 'Employed',
+    },
+    {
+        key: 'Self-employed',
+        label: 'Self-employed',
     }
 ];

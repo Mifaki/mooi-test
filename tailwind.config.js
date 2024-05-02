@@ -13,9 +13,6 @@ export default {
       },
     },
     extend: {
-      colors: {
-        primary: "",
-      },
       fontFamily: {
         body: [
           "Inter",

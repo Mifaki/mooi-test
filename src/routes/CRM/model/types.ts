@@ -9,12 +9,18 @@ export interface TableFilterI {
     onChange: (checkedItems: string[]) => void;
 }
 
+export interface FilterState {
+    gender: string[];
+    martialStatus: string[];
+    employment: string[];
+}
+
 export interface TableDataI {
-    key: React.Key;
+    key: string;
     name: string;
-    avtarURL: string
-    gender: 'Male' | 'Female'
+    avatarURL: string
+    gender: string
     dob: string
-    martialStatus: 'Single' | 'Married' | 'Divorced'
-    employment: 'Employed' | 'Unemployed'
+    martialStatus: string
+    employment: string
 }

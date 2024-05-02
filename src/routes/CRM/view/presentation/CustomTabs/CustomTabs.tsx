@@ -3,7 +3,7 @@ import { CustomTabsI } from "./type"
 
 const CustomTabs = ({
     tabs,
-    defaultIndex = 1
+    defaultIndex = 0
 }: CustomTabsI) => {
     const [activeTabIndex, setActiveTabIndex] = useState<number>(defaultIndex);
 
