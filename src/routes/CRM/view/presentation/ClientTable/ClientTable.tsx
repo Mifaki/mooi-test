@@ -1,6 +1,7 @@
 import { Avatar, Table, TableColumnsType } from "antd"
 import { useState } from "react";
 import { TableDataI } from "../../../model/types";
+import { useNavigate } from "react-router-dom";
 
 interface ClientTableProps {
     filteredData: TableDataI[];
@@ -13,13 +14,15 @@ const ClientTable = ({
     filteredValue,
     loading
 }: ClientTableProps) => {
+    const navigate = useNavigate();
+    
     const columns: TableColumnsType<TableDataI> = [
         {
             title: 'Name',
             dataIndex: 'name',
             key: 'name',
             render: (text, record) => (
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 cursor-pointer">
                     <Avatar src={record.avatarURL} alt={`${text} avatar`} />
                     <p className="font-semibold">{text}</p>
                 </div>
@@ -57,6 +60,19 @@ const ClientTable = ({
         setSelectedRowKeys(newSelectedRowKeys);
     };
 
+    const clearSelection = () => {
+        setSelectedRowKeys([]);
+    };
+
+    const onRow = (record: TableDataI) => {
+        return {
+            onClick: () => {
+                navigate(`/crm/client/${record.key}`);
+                clearSelection();
+            },
+        };
+    };
+
     const rowSelection = {
         selectedRowKeys,
         onChange: onSelectChange,
@@ -72,7 +88,8 @@ const ClientTable = ({
             pagination={{
                 pageSize: 5,
                 total: filteredData.length
-            }} />
+            }}
+            onRow={onRow} />
     )
 }
 
